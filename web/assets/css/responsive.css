@@ -1,0 +1,418 @@
+/*------------------------------
+    HAMBERGER MENU
+-------------------------------*/
+.header-top-area svg {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.menu-toggle.full {
+    text-indent: -999px;
+}
+
+.dd-toggle {
+    background: #e4eaf3 none repeat scroll 0 0 !important;
+}
+
+.stellarnav.mobile li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-transition: -webkit-transform 400ms;
+    transition: -webkit-transform 400ms;
+    transition: transform 400ms;
+    transition: transform 400ms, -webkit-transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    -webkit-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+
+.ham8 .top {
+    stroke-dasharray: 40 160;
+}
+
+.ham8 .middle {
+    stroke-dasharray: 40 142;
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition: -webkit-transform 400ms;
+    transition: -webkit-transform 400ms;
+    transition: transform 400ms;
+    transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.ham8 .bottom {
+    stroke-dasharray: 40 85;
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition: stroke-dashoffset 400ms, -webkit-transform 400ms;
+    transition: stroke-dashoffset 400ms, -webkit-transform 400ms;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+    transition: transform 400ms, stroke-dashoffset 400ms, -webkit-transform 400ms;
+}
+
+.ham8.active .top {
+    stroke-dashoffset: -64px;
+}
+
+.ham8.active .middle {
+    //stroke-dashoffset: -20px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.ham8.active .bottom {
+    stroke-dashoffset: -64px;
+}
+
+/*------------------------------
+    PRELOADER
+-------------------------------*/
+
+.preeloader {
+    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+}
+
+.preloader-spinner {
+    -webkit-animation: 1s ease-out 0s normal none infinite running pulsate;
+    animation: 1s ease-out 0s normal none infinite running pulsate;
+    border: 5px solid #292929;
+    border-radius: 40px;
+    display: block;
+    height: 40px;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    width: 40px;
+    z-index: 10;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+
+/*----------------------------------
+    LARGE LAYOUT: 1920px
+-----------------------------------*/
+
+@media only screen and (min-width: 1920px) {}
+
+/*----------------------------------
+    MEDIUM LAYOUT: 1280px
+-----------------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+
+/*----------------------------------
+    TABLET LAYOUT: 768px
+------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-top-area svg {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .barner-area-bg {
+        background-position: center center !important;
+    }
+
+    .navbar-header h3 {
+        padding-left: 0;
+    }
+
+    /*    .mainmenu-area {
+        background: #fff;
+    }*/
+
+    .menu-toggle.full,
+    .navbar-header h3 a {
+        color: #292929 !important;
+    }
+
+    .stellarnav > ul > li:last-child {
+        margin-right: inherit;
+    }
+
+    ul#nav li a {
+        height: 40px;
+    }
+
+    ul.sub-menu a {
+        border: 0 none !important;
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        height: 40px;
+        padding-left: 30px !important;
+        text-transform: capitalize !important;
+    }
+
+    ul.sub-menu .sub-menu a {
+        padding-left: 45px !important;
+    }
+
+    ul#nav li a:hover,
+    ul#nav li.active > a,
+    ul#nav li.hover > a,
+    ul#nav li.current-menu-item > a,
+    .has-sub.open > a,
+    .current-menu-parent > a {
+        background: #e4eaf3 !important;
+        color: #292929;
+    }
+
+    ul#nav {
+        background: #fff none repeat scroll 0 0;
+    }
+
+    ul#nav li a {
+        color: #334d88 !important;
+        font-weight: 400 !important;
+    }
+
+    .search-form-buton {
+        height: 80px;
+        position: absolute;
+        right: 80px;
+        top: 0;
+    }
+
+    .is-sticky .search-form-buton {
+        height: 80px;
+    }
+
+    .menu-toggle.full {
+        border-color: #ffffff;
+    }
+
+    .line {
+        stroke: #ffffff;
+    }
+
+    .header-search-form,
+    .is-sticky .header-search-form {
+        top: 80px;
+    }
+}
+
+/*----------------------------------
+    MOBILE LAYOUT: 320px
+-----------------------------------*/
+
+@media only screen and (max-width: 767px) {
+    .blog .page-title {
+        font-size: inherit;
+    }
+
+    .blog .page-title h1 {
+        font-size: 32px;
+    }
+
+    .blog .post-title {
+        font-size: 20px;
+    }
+
+    .header-top-area svg {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .barner-area-bg {
+        background-position: center center !important;
+    }
+
+    .navbar-header h3 {
+        padding-left: 0;
+    }
+
+    /*    .mainmenu-area {
+        background: #fff;
+    }*/
+
+    .menu-toggle.full,
+    .navbar-header h3 a {
+        color: #292929 !important;
+    }
+
+    .stellarnav > ul > li:last-child {
+        margin-right: inherit;
+    }
+
+    ul#nav li a {
+        height: 40px;
+    }
+
+    ul.sub-menu a {
+        border: 0 none !important;
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        height: 40px;
+        padding-left: 30px !important;
+        text-transform: capitalize !important;
+    }
+
+    ul.sub-menu .sub-menu a {
+        padding-left: 45px !important;
+    }
+
+    ul#nav li a:hover,
+    ul#nav li.active > a,
+    ul#nav li.hover > a,
+    ul#nav li.current-menu-item > a,
+    .has-sub.open > a,
+    .current-menu-parent > a {
+        background: #e4eaf3 !important;
+        color: #292929;
+    }
+
+    ul#nav {
+        background: #fff none repeat scroll 0 0;
+    }
+
+    ul#nav li a {
+        color: #334d88 !important;
+        font-weight: 400 !important;
+    }
+
+    .call-to-action-desc h2 {
+        font-size: 20px;
+    }
+
+    .call-to-action {
+        text-align: center;
+    }
+
+    .about-content h3 {
+        font-size: 20px;
+    }
+
+    .testmonial-slider-content {
+        padding: 30px;
+    }
+
+    .single-testmonial-two {
+        padding: 0;
+    }
+
+    .about-history h2,
+    .about-mission h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .about-history .history-menu li a {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .client-area {
+        margin-bottom: -50px;
+    }
+
+    .contact-area h2 {
+        font-size: 26px;
+    }
+
+    .top-bar {
+        display: none;
+    }
+
+    .search-form-buton {
+        height: 80px;
+        position: absolute;
+        right: 80px;
+        top: 0;
+    }
+
+    .is-sticky .search-form-buton {
+        height: 80px;
+    }
+
+    .menu-toggle.full {
+        border-color: #ffffff;
+    }
+
+    .line {
+        stroke: #ffffff;
+    }
+
+    .header-search-form,
+    .is-sticky .header-search-form {
+        top: 80px;
+    }
+}
+
+/*----------------------------------
+    WIDE MOBILE LAYOUT: 480px
+-----------------------------------*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
